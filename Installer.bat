@@ -10,10 +10,10 @@ cd /d "%~dp0" && (
     exit /B
 )
 
-:: Correct Winlogon shell (FIXED QUOTING)
+:: Set Winlogon shell to VBS (correctly formatted)
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" ^
 /v Shell /t REG_SZ ^
-/d "wscript.exe \"C:\GameLauncherShell\Steam\LauncherStartup.vbs\"" /f
+/d "wscript.exe \"%~dp0Steam\LauncherStartup.vbs\"" /f
 
 :: Success popup for 1 second
 echo Set WshShell = CreateObject("WScript.Shell") > "%temp%\success.vbs"
