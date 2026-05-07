@@ -17,7 +17,7 @@ To whereever your steam is.
 6. Next, I'd remove the steam big picture startup video so go to your steam folder and then config\uioverrides\movies (create these folders if you dont have them) and paste bigpictures_startup.webm
 7. You may have to open Steam big picure and select this as your startup video or it might do it automatically I dont remember lmao.
 8. I had to make a Black Screen program to hide the ugly Windows grey underneath its ui, and I have two options. One has a short beep as some home recievers need a sound input for their sound mode to change, where when the startup video occurs it means there will be sound from the start of it, and the other is silent. To switch them just rename BlackCoverSilent.exe to BlackCover.exe or change it in the Launcher.bat
-9. That's it!, use the Steam/Videos folder to place any videos you want (I used some steam deck bootup ones from https://steamdeckrepo.com/) and theyll shuffle at random. Enjoy!
+10. That's it!, Use Installer.bat to turn the mode 'on' and use Uninstaller.exe in Steam to turn it off use the Steam/Videos folder to place any videos you want (I used some steam deck bootup ones from https://steamdeckrepo.com/) and theyll shuffle at random. Enjoy!
 
 Important Notes: 
 
