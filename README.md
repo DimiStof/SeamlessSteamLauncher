@@ -2,7 +2,7 @@ Based on https://github.com/quangmach/GameLauncherShell, I wanted to make the pr
 Only Tested on Windows 11!
 
 Installation
-1. Extract the folder anywhere.
+1. Download Source Zip and extract the folder anywhere.
 2. You will need the Uninstaller.exe added to steam before you do anything just to make sure you dont have to do an annoying process to get your explorer back as the ui doesnt return when using actively this unfortunately.
 3. Enable Login without Password https://www.minitool.com/data-recovery/windows-11-auto-login.html
 4. Right Click on "\GameLauncherShell\Steam\Launcher.bat" and edit
