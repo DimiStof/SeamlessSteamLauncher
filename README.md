@@ -1,5 +1,5 @@
 Based on https://github.com/quangmach/GameLauncherShell, I wanted to make the process as seamless as possible to where you never see Windows stuff at all during startup.
-Only Test on WIndows 11!
+Only Tested on Windows 11!
 
 Installation
 1. Extract the folder anywhere.
