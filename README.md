@@ -25,7 +25,7 @@ In Launcher.bat, I've bolded where a timer ticks down where for shorter startup 
 
 Ensure AutoHideMouseCursor is set to Always Start Hidden and Start with Windows is enabled so it doesnt pop up.
 
-Nircmd is used to simulate button presses like Enter as soon as the system starts which seems to compoletely avoid the sign in screen (weird I know)
+Nircmd is used to simulate button presses like Enter as soon as the system starts which seems to completely avoid the sign in screen (weird I know)
 
 On occassion, Steam can load over the top of the video so sorry about that idk why or how to fix it rlly but its rare.
 
