@@ -17,25 +17,34 @@ if not defined RandomVideo (
     exit /b
 )
 
-:: Start mpv on top
+:: Start mpv
 START "" "%~dp0..\mpv.exe" --script-opts=osc-visibility=never --ontop=yes --panscan=1.0 --ontop-level=system --no-terminal --fullscreen=yes --force-window=yes "%RandomVideo%"
 
+:: Start Steam
+START "" "W:\Program Files (x86)\Steam\steam.exe" -gamepadui -nochatui -nofriendsui -skipinitialbootstrap -noreactlogin
 
-:: Give mpv time to fully appear
-timeout /t 1 >nul
 
-:: Start Steam underneath
-START "" "C:\Program Files (x86)\Steam\steam.exe" -gamepadui -nochatui -nofriendsui -skipinitialbootstrap -noreactlogin
-
-::CHANGE THE TIME IF LOADING TOO SLOWLY OR QUICKLY FOR YOUR SYSTEM
-timeout /t 11 >nul
+:: Background timer for minimum black screen duration
+start "" /b cmd /c "
+timeout /t 10 >nul
 taskkill /f /im BlackCover.exe >nul 2>&1
+"
 
+:: Wait until mpv closes
+:waitformpv
+tasklist /FI "IMAGENAME eq mpv.exe" 2>NUL | find /I "mpv.exe" >nul
+if not errorlevel 1 (
+    timeout /t 1 >nul
+    goto waitformpv
+)
 
-::mouse click
-timeout /t 1 >nul
+:: Wait 1 second after video closes, only use if needed
+::timeout /t 1 >nul
+
+:: Mouse click
 "%~dp0nircmd.exe" setcursor 1920 1080
 "%~dp0nircmd.exe" sendmouse left click
 
 START "" "%~dp0AutoHideMouseCursor_x64.exe"
+
 EXIT
